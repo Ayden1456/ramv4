@@ -18,15 +18,18 @@
 
 <body class="bg-body-tertiary row">
 
+  <div class="col-md-2 p-3 vh-100">
+    <!-- placeholder -->
+  </div>
 
-  <div class="col-md-2 p-3 bg-white vh-100 ">
+  <div class="col-md-2 p-3 bg-white vh-100 fixed-top rounded-5">
 
     <!-- make the small hamburger menu and hide when big (reverse of other) -->
 
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
         <a href="#" class="nav-link active bg-light text-dark" aria-current="page">
-          <i class="bi bi-house"></i>
+          <i class="bi bi-house"></i> 
           Dashboard (LTR)
         </a>
       </li>
@@ -107,13 +110,14 @@
 
       <div class="col-md-2 d-flex align-items-center justify-content-center">
 
-        <div class="bg-white p-4 rounded-4">
+        <div class="bg-white p-3 rounded-4">
           <a href="#" class="d-flex link-body-emphasis text-decoration-none dropdown-toggle align-items-center"
             data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="jozef-pfp-removebg-preview.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <img src="jozef-pfp-removebg-preview.png" alt="" width="32" height="32"
+              class="rounded-circle me-2 bg-light">
             <strong class="me-1">Jozef</strong>
           </a>
-          <ul class="dropdown-menu text-small shadow dropdown-menu-end" style="">
+          <ul class="dropdown-menu text-small shadow dropdown-menu-end">
             <li><a class="dropdown-item" href="#"></a></li>
             <li><a class="dropdown-item" href="#">Team Settings</a></li>
             <li><a class="dropdown-item" href="#">Profile</a></li>
@@ -134,15 +138,18 @@
     <div class="default-menu-items row">
 
       <!-- starred-stats -->
-      <div class="starred-stats col-md-6">
+      <div class="starred-stats col-md-5 bg-white m-5 rounded-5">
 
-        <div class="top-of-starred-stats">
-          <span class="starred-stats-title p-4 fw-bold ms-2">
-            Starred Stats
-          </span>
+        <div class="top-of-starred-stats row d-flex justify-content-start align-items-center">
+          <div class="col-md-6">
+            <span class="starred-stats-title p-4 fw-bold ms-2">
+              Starred Stats
+            </span>
+          </div>
+
 
           <!-- Year/Month radio button group -->
-          <div class="year-to-month btn-group p-3">
+          <div class="year-to-month btn-group p-3 col-md-6 d-flex justify-content-end align-items-center">
             <input type="radio" class="btn-check" name="timeOptions" id="radio1" autocomplete="off" checked>
             <label class="btn btn-outline-primary btn-custom" for="radio1" style="width: 50%;">Year</label>
 
@@ -151,7 +158,7 @@
           </div>
         </div>
 
-        <div class="stats-holder">
+        <div class="stats-holder bg-white border">
           <div class="stats-inside-container">
             <div class="dash-stat p-2">
               <i class="golden-star bi bi-star-fill"></i>
@@ -223,7 +230,7 @@
       <!-- expiring-leases -->
       <div class="expiring-leases p-3" style="padding: 0;">
 
-        <div class="top-expiring-leases-container p-3 row">
+        <div class="top-expiring-leases-container rounded-4 p-3 row">
           <span class="expiring-leases-title col-3 col-sm fw-bold">
             Expiring Leases
           </span>
