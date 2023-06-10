@@ -3,3 +3,11 @@
   font-weight: 500;
 }
 
+
+
+/* for logo on big navbar  */
+
+.logo-image {
+  margin-left: 2%;
+  width: 20%;
+}
