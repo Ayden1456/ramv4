@@ -1,0 +1,45 @@
+.logo {
+    border-radius: 0.4rem;
+    width: 100%;
+    box-shadow: 0px 5px 10px 0 #00000021;
+}
+
+.logo-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo-wrapper img {
+    margin: 5%;
+    height: 2em;
+}
+
+.logo-text {
+    display: block;
+    width: 60%;
+    font-size: 1.3vw;
+    line-height: 1.2rem;
+    color: #7a1d1d;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.logo-subtext {
+    text-transform: uppercase;
+    font-size: 0.7vw;
+    letter-spacing: 0.1vw;
+    color: #a0a0a0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 1260px) or (max-height:600px) {
+    .logo-text {
+        line-height: 0.8rem;
+        font-size: 1.5vw;
+    }
+
+    .logo-subtext {
+        display: none;
+    }
+}
