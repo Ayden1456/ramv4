@@ -285,7 +285,6 @@
             <div>
               <canvas id="myLineChart"></canvas>
             </div>
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
             <script>
               const ctx2 = document.getElementById('myLineChart');
               new Chart(ctx2, {
@@ -493,7 +492,70 @@
         </div>
       </div>
       <div class="more-charts col-md-6">
-        more-charts
+
+        <div class="expiring-leases-container p-2">
+          <div class="expiring-leases rounded-4 bg-white shadow p-3">
+            <span class="pie-chart-property-status-title fw-bold p-3 mb-3" style="font-size: 20px;">Expiring
+              Leases</span>
+
+            <div class="sub-chart-1">
+              <div>
+                <canvas id="mySubBarChart"></canvas>
+              </div>
+
+              <script>
+                const ctx3 = document.getElementById('mySubBarChart');
+
+                new Chart(ctx3, {
+                  type: 'bar',
+                  data: {
+                    labels: [''],
+                    datasets: [
+                      {
+                        label: 'High Priority (10⁺ days)',
+                        data: [2],
+                        backgroundColor: ['red'],
+                        borderWidth: 1
+                      },
+
+                      {
+                        label: 'Medium Priority (40⁺ days)',
+                        data: [7],
+                        backgroundColor: ['orange'],
+                        borderWidth: 0
+                      },
+
+                      {
+                        label: 'Low Priority (70⁺ days)',
+                        data: [4],
+                        backgroundColor: ['lightgreen'],
+                        borderWidth: 0
+                      },
+
+
+                    ]
+                  },
+                  options: {
+                    scales: {
+                      y: {
+                        beginAtZero: true
+                      }
+                    }
+                  }
+                });
+              </script>
+
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="sub-chart-2">
+
+        </div>
+
+
       </div>
     </div>
     <!-- md-10div  -->
