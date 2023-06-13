@@ -41,13 +41,14 @@
   </style>
 </head>
 <body>
-  <div class="container mt-5">
-    <h1 class="text-center">Occupancy</h1>
-    <div class="progress-wrapper">
-      <div class="progress-circle"></div>
-      <div class="progress-bar" style="width: 75%;"></div>
-      <div class="progress-label">75%</div>
-    </div>
+
+  <!-- Repeat this structure for each star -->
+  <div class="dash-stat row bg-light p-3 m-2 rounded-4">
+    <span class="col-md-10">
+      <i onclick="toggleStar(this)" class="star bi bi-star me-3"></i>
+      Occupancy (Gov't Subsidized) <!-- Change text for each star -->
+    </span>
+    <div class="col-md-2 actual-stat d-flex justify-content-end">0</div>
   </div>
 </body>
 </html>
