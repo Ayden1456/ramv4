@@ -223,43 +223,98 @@
     </div>
 
     <div class="top-2 row">
-      <div class="main-pie-chart col-md-6">
-        <div class="doughnut-chart">
+      <div class="main-pie-chart col-md-6 p-4">
 
-          <div class="pie-chart-property-status-title fw-bold" style="font-size: 20px;">Property Status Legend</div>
 
-          <div>
-            <canvas id="myChart"></canvas>
+        <div class="bg-white rounded-4 p-2 shadow">
+
+
+          <!-- doughnut chart  -->
+          <div class="doughnut-chart">
+            <div class="pie-chart-property-status-title fw-bold p-3" style="font-size: 20px;">
+              Property Status Legend
+            </div>
+            <div>
+              <canvas id="myChart"></canvas>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+              const ctx = document.getElementById('myChart');
+              new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                  labels: ['Available', 'Turning', 'Renovating', 'Leased'],
+                  datasets: [{
+                    label: 'Unit Status',
+                    data: [12, 19, 3, 5],
+                    backgroundColor: ['darkblue', 'pink', 'orange', 'lightgreen'],
+                    borderWidth: 1
+                  }]
+                },
+                options: {
+                  layout: {
+                    padding: 0
+                  }
+                }
+              });
+            </script>
           </div>
 
-          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-          <script>
-            const ctx = document.getElementById('myChart');
-
-            new Chart(ctx, {
-              type: 'doughnut',
-              data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                datasets: [{
-                  label: 'Unit Status',
-                  data: [12, 19, 3, 5, 2, 3],
-                  borderWidth: 1
-                }]
-              },
-              options: {
-                layout: {
-                  padding: 0
-                }
-              }
-            });
-          </script>
-
-
+          <!-- doughnut chart  -->
         </div>
+
       </div>
-      <div class="graph col-md-6">
-        graph
+
+
+
+      <div class="graph col-md-6 p-4">
+        <div class="bg-white rounded-4 p-3 shadow">
+          <!-- aquisition graph  -->
+          <div>
+            <div>
+              <canvas id="myBarChart"></canvas>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+              const ctx2 = document.getElementById('myBarChart');
+              new Chart(ctx2, {
+                type: 'line',
+                data: {
+                  labels: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+                  datasets: [{
+                    label: 'Total Properties',
+                    data: [12, 19, 3, 5, 2, 3, 3, 3, 3, 3],
+                    borderWidth: 1
+                  },
+                  {
+                    label: 'Disposition',
+                    data: [5, 8, 6, 15, 12, 14, 9, 6, 10, 8],
+                    fill: false,
+                    borderWidth: 1
+                  },
+                  {
+                    label: 'Aquisition',
+                    data: [2, 5, 2, 6, 10, 13, 5, 6, 1, 0],
+                    fill: false,
+                    borderWidth: 1
+                  }
+                  ]
+                },
+                options: {
+                  scales: {
+                    y: {
+                      beginAtZero: true
+                    }
+                  }
+                }
+              });
+            </script>
+          </div>
+          <!-- aquisition graph  -->
+        </div>
+
+
+
       </div>
     </div>
 
