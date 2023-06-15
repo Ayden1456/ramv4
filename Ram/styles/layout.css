@@ -43,3 +43,8 @@
         display: none;
     }
 }
+
+.nav-link:hover {
+    border-radius: 0.2rem;
+    font-weight: 500;
+  }

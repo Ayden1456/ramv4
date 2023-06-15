@@ -13,7 +13,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="metrics-stylesheet.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./scripts/graph-loader.js" defer> </script>
+    <script src="./scripts/animations.js"></script>
+    <link rel="stylesheet" href="./styles/layout.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -240,29 +243,8 @@
             <div class="doughnut-chart" style="width: 60%;">
 
               <div>
-                <canvas id="myChart"></canvas>
+                <canvas id="doughnut-chart-canvas"></canvas>
               </div>
-              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-              <script>
-                const ctx = document.getElementById('myChart');
-                new Chart(ctx, {
-                  type: 'pie',
-                  data: {
-                    labels: ['Available', 'Turning', 'Renovating', 'Leased'],
-                    datasets: [{
-                      label: 'Unit Status',
-                      data: [12, 19, 3, 5],
-                      backgroundColor: ['darkblue', 'pink', 'orange', 'lightgreen'],
-                      borderWidth: 1
-                    }]
-                  },
-                  options: {
-                    layout: {
-                      padding: 0
-                    }
-                  }
-                });
-              </script>
             </div>
           </div>
 
@@ -283,42 +265,8 @@
           <div>
 
             <div>
-              <canvas id="myLineChart"></canvas>
+              <canvas id="line-chart-canvas"></canvas>
             </div>
-            <script>
-              const ctx2 = document.getElementById('myLineChart');
-              new Chart(ctx2, {
-                type: 'line',
-                data: {
-                  labels: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-                  datasets: [{
-                    label: 'Total Properties',
-                    data: [12, 19, 3, 5, 2, 3, 3, 3, 3, 3],
-                    borderWidth: 1
-                  },
-                  {
-                    label: 'Disposition',
-                    data: [5, 8, 6, 15, 12, 14, 9, 6, 10, 8],
-                    fill: false,
-                    borderWidth: 1
-                  },
-                  {
-                    label: 'Aquisition',
-                    data: [2, 5, 2, 6, 10, 13, 5, 6, 1, 0],
-                    fill: false,
-                    borderWidth: 1
-                  }
-                  ]
-                },
-                options: {
-                  scales: {
-                    y: {
-                      beginAtZero: true
-                    }
-                  }
-                }
-              });
-            </script>
           </div>
 
 
@@ -500,50 +448,8 @@
 
             <div class="sub-chart-1">
               <div>
-                <canvas id="mySubBarChart"></canvas>
+                <canvas id="bar-chart-canvas"></canvas>
               </div>
-
-              <script>
-                const ctx3 = document.getElementById('mySubBarChart');
-
-                new Chart(ctx3, {
-                  type: 'bar',
-                  data: {
-                    labels: [''],
-                    datasets: [
-                      {
-                        label: 'High Priority (10⁺ days)',
-                        data: [2],
-                        backgroundColor: ['red'],
-                        borderWidth: 1
-                      },
-
-                      {
-                        label: 'Medium Priority (40⁺ days)',
-                        data: [7],
-                        backgroundColor: ['orange'],
-                        borderWidth: 0
-                      },
-
-                      {
-                        label: 'Low Priority (70⁺ days)',
-                        data: [4],
-                        backgroundColor: ['lightgreen'],
-                        borderWidth: 0
-                      },
-
-
-                    ]
-                  },
-                  options: {
-                    scales: {
-                      y: {
-                        beginAtZero: true
-                      }
-                    }
-                  }
-                });
-              </script>
 
             </div>
           </div>
@@ -561,22 +467,6 @@
     <!-- md-10div  -->
 
   </div>
-
-
-
-  <!-- javascript for toggling golden stars  -->
-  <script>
-    function toggleStar(star) {
-      if (star.classList.contains('bi-star')) {
-        star.classList.remove('bi-star');
-        star.classList.add('bi-star-fill', 'text-warning');
-      } else {
-        star.classList.remove('bi-star-fill', 'text-warning');
-        star.classList.add('bi-star');
-      }
-    }
-  </script>
-  <!-- end of javascript for toggling golden stars  -->
 
 </body>
 
