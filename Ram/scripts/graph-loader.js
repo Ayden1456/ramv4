@@ -106,7 +106,11 @@ const chartData = {
 const loadedCharts = [];
 const loadCharts = () => {
     for (chart of chartData.charts) {
-        loadedCharts.push(new Chart(document.getElementById(`${chart.ctxIdentifier}-chart-canvas`), chart.data));
+        // this will also create the actual page elements
+        if (document.getElementById(`${chart.ctxIdentifier}-chart-canvas`) != null) {
+            loadedCharts.push(new Chart(document.getElementById(`${chart.ctxIdentifier}-chart-canvas`), chart.data));
+        }
+        
     }
 }
 

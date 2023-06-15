@@ -14,6 +14,12 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./styles/layout.css">
 
+  <!-- scripts for graphs  -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./scripts/graph-loader.js" defer> </script>
+  <script src="./scripts/animations.js"></script>
+  <link rel="stylesheet" href="./styles/layout.css">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -231,8 +237,8 @@
     <div class="default-menu-items row">
 
       <!-- starred-stats -->
-      <div class="starred-stats-container col-md-6 pt-5 pb-5 pr-2 pl-5">
-        <div class="starred-stats bg-white rounded-4 p-3 shadow"  style="height: 100%;">
+      <div class="starred-stats-container col-md-6 p-4">
+        <div class="starred-stats bg-white rounded-4 p-3 shadow" style="height: 100%;">
 
           <div class="top-of-starred-stats row d-flex justify-content-start align-items-center p-3">
 
@@ -292,8 +298,8 @@
 
 
       <!-- upcoming-tasks -->
-      <div class="upcoming-tasks-container col-md-6 pt-5 pb-5 pr-5 pl-2">
-        <div class="upcoming-tasks bg-white rounded-4 p-3 shadow"  style="height: 100%;">
+      <div class="upcoming-tasks-container col-md-6 p-4">
+        <div class="upcoming-tasks bg-white rounded-4 p-3 shadow" style="height: 100%;">
           <div class="top-of-upcoming-tasks row d-flex justify-content-start align-items-center p-3">
             <span class="upcoming-tasks-title fw-bold col-lg-6">Upcoming Tasks</span>
 
@@ -338,63 +344,110 @@
       </div>
 
 
-      <!-- expiring-leases -->
-      <div class="expiring-leases-container pl-5 pr-5 pb-5 ">
-        <div class="expiring-leases p-3 bg-white rounded-4 shadow " style="padding: 0;">
-          <div class="top-expiring-leases-container rounded-4 p-3 row align-items-center justify-content-center">
-            <span class="expiring-leases-title col-3 col-sm fw-bold ">
-              Expiring Leases
-            </span>
-            <!-- 0-90 day toggle -->
-            <div class="zero-to-ninety col-6 col-sm btn-group" style="padding: 0;">
-              <input type="radio" class="btn-check" name="range" id="radio-0-30" autocomplete="off" checked>
-              <label class="btn btn-outline-primary btn-custom rounded-left" for="radio-0-30"
-                style="width: 50%;">0-30</label>
 
-              <input type="radio" class="btn-check" name="range" id="radio-31-60" autocomplete="off">
-              <label class="btn btn-outline-primary btn-custom" for="radio-31-60" style="width: 50%;">30-61</label>
+      <div class="middle-stats row" style="margin: 0; padding: 0;">
 
-              <input type="radio" class="btn-check" name="range" id="radio-61-90" autocomplete="off">
-              <label class="btn btn-outline-primary btn-custom" for="radio-61-90" style="width: 50%;">61-90</label>
-            </div>
-          </div>
+        <!-- expiring-leases -->
+        <div class="expiring-leases-container col-md-6 p-4" style="padding: 0;">
+          <div class="expiring-leases p-2 bg-white rounded-4 shadow " style="padding: 0;">
+            <div class="top-expiring-leases-container rounded-4 p-3 row">
+              <span class="expiring-leases-title col-3 col-sm fw-bold ">
+                Expiring Leases
+              </span>
+              <!-- 0-90 day toggle -->
+              <div class="zero-to-ninety col-6 col-sm btn-group" style="padding: 0;">
+                <input type="radio" class="btn-check" name="range" id="radio-0-30" autocomplete="off" checked>
+                <label class="btn btn-outline-primary btn-custom rounded-left" for="radio-0-30"
+                  style="width: 50%;">0-30</label>
 
+                <input type="radio" class="btn-check" name="range" id="radio-31-60" autocomplete="off">
+                <label class="btn btn-outline-primary btn-custom" for="radio-31-60" style="width: 50%;">30-61</label>
 
-          <!-- expiring leases graph -->
-          <div class="expiring leases-graph p-3">
-            <div class="rounded-4 mb-3" style="width: 100%; background-color: #f0f0f0;">
-              <div class="rounded-4"
-                style="display: flex; align-items: center; justify-content: flex-start; width:33%; height: 30px; margin: 5px 0; background-color: rgb(255, 77, 0);">
-                <span class="ms-1 rounded-4" style="color: white; padding: 0 10px;">3 (10⁺ days)</span>
+                <input type="radio" class="btn-check" name="range" id="radio-61-90" autocomplete="off">
+                <label class="btn btn-outline-primary btn-custom" for="radio-61-90" style="width: 50%;">61-90</label>
               </div>
             </div>
 
-            <div class="rounded-4 mb-3" style="width: 100%; background-color: #f0f0f0;">
-              <div class="rounded-4"
-                style="display: flex; align-items: center; justify-content: flex-start; width:100%; height: 30px; margin: 5px 0; background-color: orange;">
-                <span class="ms-1 rounded-4" style="color: white; padding: 0 10px;">10 (40⁺ days)</span>
+
+            <!-- graph -->
+            <div class="expiring-leases-container p-2">
+              <div class="expiring-leases rounded-4 bg-white shadow p-3">
+
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+                <div class="sub-chart-1">
+                  <div>
+                    <canvas id="bar-chart-canvas"></canvas>
+                  </div>
+                  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row justify-content-center d-flex">
+              <div class="p-2 col-md-3" style="display: flex; justify-content: center;">
+                <a href="" class="see-all-default btn btn-primary">Full Calendar</a>
+              </div>
+              <div class="p-2 col-md-3" style="display: flex; justify-content: center;">
+                <a href="" class="see-all-default btn btn-primary">All Metrics</a>
               </div>
             </div>
 
-            <div class="rounded-4" style="width: 100%; background-color: #f0f0f0;">
-              <div class="rounded-4"
-                style="display: flex; align-items: center; justify-content: flex-start; width:100%; height: 30px; margin: 5px 0; background-color: rgb(69, 175, 36);">
-                <span class="ms-1 rounded-4" style="color: white; padding: 0 10px;">5 (70⁺ days)</span>
-              </div>
-            </div>
           </div>
-
-          <div class="m-3" style="display: flex; justify-content: center;">
-            <a href="" class="see-all-default btn btn-primary">All Details (Full Calendar)</a>
-          </div>
+          <!-- end of expiring leases graph -->
         </div>
-        <!-- end of expiring leases graph -->
+
+
+
+        <!-- Property Status Legend (%) -->
+        <div class="property-status-legend-container col-md-6 p-4">
+          <div class="property-status-legend p-3 bg-white rounded-4 shadow">
+            <div class="top-property-status-legend-container rounded-4 p-3 row align-items-center justify-content-center">
+              <span class="property-status-legend-title col-3 col-sm fw-bold">
+                Property Status Legend
+              </span>
+            </div>
+
+
+            <div class="bg-white rounded-4 p-2 shadow">
+
+              <!-- doughnut chart  -->
+              <div class="doughnut-container align-items-center justify-content-center d-flex">
+                <div class="doughnut-chart" style="width: 52%;">
+
+                  <div>
+                    <canvas id="doughnut-chart-canvas"></canvas>
+                    <!-- HOW DOES THIS EFFECT EVERYTHING??  -->
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- doughnut chart  -->
+            </div>
+
+            <div class="m-3" style="display: flex; justify-content: center;">
+              <a href="" class="see-all-default btn btn-primary">All Metrics</a>
+            </div>
+          </div>
+          <!-- end of Property Status Legend (%) -->
+        </div>
+
+
+
+
       </div>
 
 
 
+
+
+
       <!-- priority-properties -->
-      <div class="priority-properties-container pl-5 pr-5 ">
+      <div class="priority-properties-container p-4">
         <div class="priority-properties rounded-4 bg-white pb-5 shadow ">
           <div class="top-of-priority-properties row pt-5 pr-5 pl-4">
             <p class="priority-properties-title fw-bold col-4">Priority Properties</p>
