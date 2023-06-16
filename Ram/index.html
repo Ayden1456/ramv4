@@ -25,6 +25,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+  <!-- DataTable dependencies-->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+  <script src="./scripts/table-loader.datatable.js"></script>
 
 </head>
 
@@ -453,53 +458,8 @@
             <p class="priority-properties-title fw-bold col-4">Priority Properties</p>
           </div>
 
-          <div class="bg-light mb-3" style="overflow-x: auto;">
-            <ul class="category-filters list-unstyled m-3 d-flex">
-              <li class="">
-                <input type="checkbox" name="checkboxes" id="Subdivision" value="Subdivision">
-                <label class="dropdown-checkbox mr-3" for="Subdivision">Subdivision</label>
-              </li>
-              <li class="">
-                <input type="checkbox" name="checkboxes" id="Lease Expires" value="Lease Expires">
-                <label class="dropdown-checkbox mr-3" for="Lease Expires">Lease Expires</label>
-              </li>
-              <li class="">
-                <input type="checkbox" name="checkboxes" id="Unit #" value="Unit #">
-                <label class="dropdown-checkbox mr-3" for="Unit #">Unit #</label>
-              </li>
-              <li class="" style="margin: 0;">
-                <input type="checkbox" name="radios" id="Tenant Name" value="Tenant Name">
-                <label class="dropdown-checkbox mr-3" for="Tenant Name">Tenant Name</label>
-              </li>
-              <li class="">
-                <input type="checkbox" name="radios" id="Insured?" value="Insured?">
-                <label class="dropdown-checkbox mr-3" for="Insured?">Insured?</label>
-              </li>
-              <li class="">
-                <input type="checkbox" name="radios" id="Rent/Month" value="Rent/Month">
-                <label class="dropdown-checkbox mr-3" for="Rent/Month">Rent/Month</label>
-              </li>
-              <li class="">
-                <input type="checkbox" name="radios" id="Comments" value="Comments">
-                <label class="dropdown-checkbox mr-3" for="Comments">Comments</label>
-              </li>
-              <li class="">
-                <input type="checkbox" name="radios" id="Inspection" value="Inspection">
-                <label class="dropdown-checkbox mr-3" for="Inspection">Inspection</label>
-              </li>
-              <li class="">
-                <input type="checkbox" name="radios" id="LC" value="LC">
-                <label class="dropdown-checkbox mr-3" for="LC">LC</label>
-              </li>
-              <li class="">
-                <input type="checkbox" name="radios" id="Gar" value="Gar">
-                <label class="dropdown-checkbox" for="Gar">Gar.</label>
-              </li>
-            </ul>
-          </div>
-
-          <div class="table-responsive">
-            <table class="table table-striped table-hover table-bordered">
+          <div class="table-responsive m-3 rounded-4 bg-white shadow" style="width: 98%;margin: auto;padding:1%;">
+            <table class="table table-striped table-hover table-bordered " id="datatable-impl">
               <thead class="table-primary">
                 <tr>
                   <th>Subdivision</th>
