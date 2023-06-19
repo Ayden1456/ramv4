@@ -9,7 +9,7 @@ This code is the development of RAM software.
 
 ## Contributing
 
-PRs accepted if contributing.
+Any suggestions are welcome.
 
 ## License
 
