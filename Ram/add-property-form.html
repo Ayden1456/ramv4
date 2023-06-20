@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoenix - Add Property</title>
+    <link rel="icon" href="images/./phoenix-logo.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/layout.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <style>
+        .placeholder {
+            background-color: lightgray;
+        }
+    </style>
+
+</head>
+
+<body class="bg-body-tertiary row container-fluid" style="margin: auto; padding: 0;">
+
+    <div class="col-md-2 p-3 vh-100 d-none d-md-block">
+        <!-- placeholder -->
+    </div>
+
+    <div class="col-md-2 p-3 bg-white vh-100 fixed-top rounded-start rounded-4 d-none d-md-block shadow ">
+
+
+
+        <!-- make the small hamburger menu and hide when big (reverse of other) -->
+
+        <ul class="nav nav-pills flex-column mb-auto">
+            <div class="logo mb-3">
+                <li>
+                    <a class="logo-wrapper" href="#">
+                        <img src="images/phoenix-logo-no-words.png" alt="Phoenix Capital Fund Logo" class="">
+                        <span class="logo-text">
+                            <!-- Variable brand name according to viewport size -->
+                            <span class="logo-subtext">capital fund</span>
+                        </span>
+                    </a>
+                </li>
+            </div>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link active bg-transparent text-dark" aria-current="page">
+                    <i class="bi bi-house"></i>
+                    Dashboard ()
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="nav-link link-body-emphasis mt-3">
+                    <i class="bi bi-buildings"></i>
+                    Properties
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link link-body-emphasis mt-3">
+                    <i class="bi bi-file-earmark-person"></i>
+                    CRM
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link link-body-emphasis mt-3">
+                    <i class="bi bi-newspaper"></i>
+                    Reports
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link link-body-emphasis mt-3">
+                    <i class="bi bi-file-bar-graph"></i>
+                    Metrics
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link link-body-emphasis border border-dark-subtle rounded-4 m-3"
+                    style="width: 100px;">
+                    <i class="bi bi-three-dots-vertical"></i>
+                    More
+                </a>
+            </li>
+        </ul>
+
+
+        <ul class="nav" style="position: absolute; bottom: 3%;">
+            <li>
+                <a href="#" class="nav-link link-body-emphasis">
+                    <i class="bi bi-gear"></i>
+                    Settings
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+
+    <!-- navbar-sm -->
+    <nav class="navbar navbar-expand-md navbar-light bg-white d-md-none shadow mb-4">
+        <a class="navbar-brand" href="#">
+            Phoenix Capital Fund - US
+            <img src="images/phoenix-logo-no-words.png" alt="Phoenix Capital Fund Logo"
+                style="margin-left: 2%; width: 20%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+            <ul class="navbar-nav ">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-buildings"></i>
+                        Dashboard (LTR)
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-buildings"></i>
+                        Properties
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown">
+                        <i class="bi bi-file-earmark-person"></i>
+                        CRM
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Contacts</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="">Organizations</a>
+                    </div>
+                </li>
+
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-newspaper"></i>
+                        Reports
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-file-bar-graph"></i>
+                        Metrics
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown d-flex">
+                    <div class="rounded-3 bg-light pl-3 pr-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown">
+                            <span class="">More</span>
+                        </a>
+                        <div class="dropdown-menu mb-3" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Inbox</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="">Help</a>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+    <!-- end of navbar-sm -->
+
+    <!-- end of navbar -->
+
+    <div class="col-md-10 col-sm-12">
+
+
+        <div class="row">
+            <!-- greeting -->
+            <div class="col-md-3 d-flex align-items-center justify-content-center">
+                <!-- left placeholder  -->
+            </div>
+            <div class="col-md-6">
+
+                <div class="add-property-background bg-white shadow rounded-bottom-4 p-4 fw-bold">Add a property:
+                    primary information</div>
+
+            </div>
+
+            <div class="col-md-3 d-flex align-items-center justify-content-center">
+                <!-- right placeholder  -->
+            </div>
+
+        </div>
+
+        <div class="row">
+            <!-- greeting -->
+            <div class="col-md-3 d-flex align-items-center justify-content-center" aria-hidden="true">
+                <!-- left placeholder  -->
+            </div>
+
+            <form class="col-md-6 p-3">
+
+                <div class="add-property-background bg-white shadow rounded-4 p-4">
+
+                    <div class="row bg-light p-2 rounded-4">
+                        <span class="col-md-8 align-items-center d-flex">
+                            <i class="bi bi-houses me-3"></i>
+                            * Investment strategy
+                        </span>
+                        <div class="col-md-4">
+                            <select id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row bg-light p-2 rounded-4 mt-2">
+                        <span class="col-md-8 align-items-center d-flex">
+                            <i class="bi bi-flag me-3"></i>
+                            * Country
+                        </span>
+                        <div class="col-md-4">
+                            <select id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row bg-light p-2 rounded-4 mt-2">
+                        <span class="col-md-8 align-items-center d-flex">
+                            <i class="bi bi-flag me-3"></i>
+                            * Province/State
+                        </span>
+                        <div class="col-md-4">
+                            <select id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row bg-light p-2 rounded-4 mt-2">
+                        <span class="col-md-8 align-items-center d-flex">
+                            <i class="bi bi-flag me-3"></i>
+                            * City
+                        </span>
+                        <div class="col-md-4">
+                            <select id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row bg-light p-2 rounded-4 mt-2">
+                        <span class="col-md-8 align-items-center d-flex">
+                            <i class="bi bi-flag me-3"></i>
+                            * Address & suite number
+                        </span>
+                        <div class="col-md-4">
+                            <div class="">
+                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                <input type="text" class="form-control mt-2" id="inputSuite" placeholder="Suite Number">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row bg-light p-2 rounded-4 mt-2">
+                        <span class="col-md-8 align-items-center d-flex">
+                            <i class="bi bi-flag me-3"></i>
+                            * Postal code / zip
+                        </span>
+                        <div class="col-md-4">
+                            <div class="">
+                                <input type="text" class="form-control" id="inputCode" placeholder="T3BC4D">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row bg-light p-2 rounded-4 mt-2">
+                        <span class="col-md-8 align-items-center d-flex">
+                            <i class="bi bi-flag me-3"></i>
+                            * Property type
+                        </span>
+                        <div class="col-md-4">
+                            <select id="inputPropertyType" class="form-control">
+                                <option selected>Select</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row bg-light p-2 rounded-4 mt-2">
+                        <span class="col-md-8 align-items-center d-flex">
+                            <i class="bi bi-flag me-3"></i>
+                            * Bedrooms
+                        </span>
+                        <div class="col-md-4">
+                            <select id="inputBathrooms" class="form-control">
+                                <option selected>Select</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row bg-light p-2 rounded-4 mt-2">
+                        <span class="col-md-8 align-items-center d-flex">
+                            <i class="bi bi-flag me-3"></i>
+                            * Bathrooms
+                        </span>
+                        <div class="col-md-4">
+                            <select id="inputBedrooms" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row bg-light p-2 rounded-4 mt-2">
+                        <span class="col-md-8 align-items-center d-flex">
+                            <i class="bi bi-flag me-3"></i>
+                            * Den / office
+                        </span>
+                        <div class="col-md-4">
+                            <select id="inputLotSize" class="form-control">
+                                <option selected>Yes / No</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row bg-light p-2 rounded-4 mt-2">
+                        <span class="col-md-8 align-items-center d-flex">
+                            <i class="bi bi-flag me-3"></i>
+                            * Parcel number
+                        </span>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" id="inputsLotSize" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="row bg-light p-2 rounded-4 mt-2">
+                        <span class="col-md-8 align-items-center d-flex">
+                            <i class="bi bi-flag me-3"></i>
+                            * Lot size
+                        </span>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" id="inputsLotSize" placeholder="">
+
+                        </div>
+                    </div>
+
+                    <div class="row bg-light p-2 rounded-4 mt-2">
+                        <span class="col-md-8 align-items-center d-flex">
+                            <i class="bi bi-flag me-3"></i>
+                            * Suite / unit number
+                        </span>
+                        <div class="col-md-4">
+                            <select id="inputLotSize" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <!-- bottom buttons  -->
+                    <div class="row justify-content-center">
+                        <div class="justify-content-center d-flex pt-4 col-lg-6">
+                            <button type="submit" class="see-all-default btn btn-primary">Submit</button>
+                        </div>
+
+                        <div class="justify-content-center d-flex pt-4 col-lg-6">
+                            <button type="submit" class="see-all-default btn btn-primary bg-white"
+                                style="color: #1888FF; ">All details</button>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+
+            </form>
+
+            <div class="col-md-3 d-flex align-items-center justify-content-center">
+                <!-- right placeholder  -->
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- col 10  -->
+    </div>
+
+</body>
+
+</html>
