@@ -1,3 +1,17 @@
-# Ram-v4
+# RamV4
 
-I love css
+This code is the development of RAM software.
+
+## Install
+
+```
+Nothing to install yet
+```
+
+## Contributing
+
+Any suggestions are welcome.
+
+## License
+
+Passiosoft © Ayden Lum
