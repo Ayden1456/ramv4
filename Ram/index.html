@@ -31,6 +31,13 @@
   <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
   <script src="./scripts/table-loader.datatable.js"></script>
 
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+
+
+
 </head>
 
 <body class="bg-body-tertiary row container-fluid" style="margin: auto; padding: 0;">
@@ -52,7 +59,7 @@
             <img src="images/phoenix-logo-no-words.png" alt="Phoenix Capital Fund Logo" class="">
             <span class="logo-text">
               <!-- Variable brand name according to viewport size -->
-                <span class="logo-subtext">capital fund</span>
+              <span class="logo-subtext">capital fund</span>
             </span>
           </a>
         </li>
@@ -97,14 +104,40 @@
       </li>
     </ul>
 
+    <div class="d-flex align-items-center justify-content-center" style="position: absolute; bottom: 3%; width: 80%;">
 
-    <ul class="nav" style="position: absolute; bottom: 3%;">
-      <li>
-        <a href="#" class="nav-link link-body-emphasis">
-          <i class="bi bi-gear"></i>
-          Settings
+      <div class="bg-white p-3 rounded-4 shadow ">
+        <a href="#" class="d-flex link-body-emphasis text-decoration-none dropdown-toggle align-items-center"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="images/jozef-pfp-removebg-preview.png" alt="" width="32" height="32"
+            class="rounded-circle me-2 bg-light">
+          <strong class="me-1">Jozef</strong>
         </a>
-      </li>
+        <ul class="dropdown-menu text-small shadow dropdown-menu-end">
+          <li><a class="dropdown-item" href="#"></a></li>
+          <li><a class="dropdown-item" href="#">Team Settings</a></li>
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="#">Sign out</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li>
+            <a href="#" class="nav-link link-body-emphasis">
+              <i class="bi bi-gear"></i>
+              Settings
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <ul class="nav">
+
     </ul>
 
   </div>
@@ -201,38 +234,42 @@
       <!-- search-bar -->
       <div class="col-md-6 p-4">
         <div class="rounded ">
-          <div class="search-bar input-group input-group-lg">
+          <div class="search-bar input-group input-group-md">
             <span class="input-group-text" id="search-icon"
               style="border-bottom-left-radius: 30px; border-top-left-radius: 30px;">
               <i class="bi bi-search ms-1" style="text-align: center;"></i>
             </span>
-            <input type="search" id="form1" class="form-control" placeholder="Search (for example: Garden Avenue)"
-              aria-label="Search" aria-describedby="search-icon" style="font-size: small;" />
+            <input type="search" id="form1" class="form-control" placeholder="Search..." aria-label="Search"
+              aria-describedby="search-icon"
+              style="font-size: small; border-bottom-right-radius: 30px; border-top-right-radius: 30px;" />
           </div>
         </div>
       </div>
 
-      <div class="col-md-3 d-flex align-items-center justify-content-center">
+      <!-- add button -->
+      <div class="btn-group col-md-3 align-items-center justify-content-center">
 
-        <div class="bg-white p-3 rounded-4 shadow ">
-          <a href="#" class="d-flex link-body-emphasis text-decoration-none dropdown-toggle align-items-center"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="images/jozef-pfp-removebg-preview.png" alt="" width="32" height="32"
-              class="rounded-circle me-2 bg-light">
-            <strong class="me-1">Jozef</strong>
-          </a>
-          <ul class="dropdown-menu text-small shadow dropdown-menu-end">
-            <li><a class="dropdown-item" href="#"></a></li>
-            <li><a class="dropdown-item" href="#">Team Settings</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
-          </ul>
+        <div class="rounded-4 p-3 bg-white shadow">
+          <button type="button" class="btn btn-primary">
+            Add New <i class="bi bi-house-add"></i>
+          </button>
+          <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
         </div>
-
       </div>
+
+
+
+
 
     </div>
 
@@ -355,7 +392,7 @@
         <!-- expiring-leases -->
         <div class="expiring-leases-container col-md-6 p-4" style="padding: 0;">
           <div class="expiring-leases p-2 bg-white rounded-4 shadow " style="padding: 0;">
-            <div class="top-expiring-leases-container rounded-4 p-3 row">
+            <div class="top-expiring-leases-container rounded-4 pt-3 pl-3 pr-3 row">
               <span class="expiring-leases-title col-3 col-sm fw-bold ">
                 Expiring Leases
               </span>
@@ -410,8 +447,8 @@
         <!-- Property Status Legend (%) -->
         <div class="property-status-legend-container col-md-6 p-4">
           <div class="property-status-legend p-3 bg-white rounded-4 shadow">
-            <div class="top-property-status-legend-container rounded-4 p-3 row align-items-center justify-content-center">
-              <span class="property-status-legend-title col-3 col-sm fw-bold">
+            <div class="top-property-status-legend-container rounded-4 row align-items-center justify-content-center">
+              <span class="property-status-legend-title col-3 p-3 col-sm fw-bold">
                 Property Status Legend
               </span>
             </div>
@@ -452,64 +489,62 @@
 
 
       <!-- priority-properties -->
-      <div class="priority-properties-container p-4">
-        <div class="priority-properties rounded-4 bg-white pb-5 shadow ">
-          <div class="top-of-priority-properties row pt-5 pr-5 pl-4">
-            <p class="priority-properties-title fw-bold col-4">Priority Properties</p>
-          </div>
-
-          <div class="table-responsive m-3 rounded-4 bg-white shadow" style="width: 98%;margin: auto;padding:1%;">
-            <table class="table table-striped table-hover table-bordered " id="datatable-impl">
-              <thead class="table-primary">
-                <tr>
-                  <th>Subdivision</th>
-                  <th>Lease Expires</th>
-                  <th>Unit #</th>
-                  <th>Tenant Name</th>
-                  <th>Insured?</th>
-                  <th>Rent/Month</th>
-                  <th>Comments</th>
-                  <th>Inspection</th>
-                  <th>LC</th>
-                  <th>Gar.</th>
-                  <th>More</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Example Subdivision</td>
-                  <td>31/12/2023</td>
-                  <td>#1</td>
-                  <td>John Doe</td>
-                  <td>Yes</td>
-                  <td>$1000</td>
-                  <td>Some comments</td>
-                  <td>Passed</td>
-                  <td>LC Info</td>
-                  <td>Gar Info</td>
-                  <td>
-                    <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#more1">
-                      More
-                    </button>
-                    <div id="more1" class="collapse">
-                      <p>Additional information...</p>
-                    </div>
-                  </td>
-                </tr>
-                <!-- Add more rows as necessary -->
-              </tbody>
-            </table>
-          </div>
-
-
-          <div class="m-3" style="display: flex; justify-content: center;">
-            <a href="" class="see-all-default btn btn-primary">Display All Properties</a>
-          </div>
-
-        </div>
-      </div>
 
     </div>
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              <h4 class="mb-0">Priority Properties</h4>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table id="priority-properties" class="table table-striped table-bordered dt-responsive nowrap"
+                  style="width:100%">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>First name</th>
+                      <th>Last name</th>
+                      <th>Position</th>
+                      <th>Office</th>
+                      <th>Age</th>
+                      <th>Start date</th>
+                      <th>Salary</th>
+                      <th>Extn.</th>
+                      <th>E-mail</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Tiger</td>
+                      <td>Nixon</td>
+                      <td>System Architect</td>
+                      <td>Edinburgh</td>
+                      <td>61</td>
+                      <td>2011-04-25</td>
+                      <td>$320,800</td>
+                      <td>5421</td>
+                      <td>t.nixon@datatables.net</td>
+                    </tr>
+                    <!-- Other rows... -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- At the end of your body, add these -->
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.colVis.min.js"></script>
 
 </body>
 

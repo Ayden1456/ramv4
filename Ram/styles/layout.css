@@ -42,9 +42,11 @@
         line-height: 0.8rem;
         font-size: 1.5vw;
     }
+
     .logo-text::before {
         content: "Phoenix CF";
     }
+
     .logo-subtext {
         display: none;
     }
@@ -53,4 +55,13 @@
 .nav-link:hover {
     border-radius: 0.2rem;
     font-weight: 500;
-  }
+}
+
+.dataTables_wrapper .dataTable thead .sorting:before,
+.dataTables_wrapper .dataTable thead .sorting:after,
+.dataTables_wrapper .dataTable thead .sorting_asc:before,
+.dataTables_wrapper .dataTable thead .sorting_asc:after,
+.dataTables_wrapper .dataTable thead .sorting_desc:before,
+.dataTables_wrapper .dataTable thead .sorting_desc:after {
+    display: none;
+}
