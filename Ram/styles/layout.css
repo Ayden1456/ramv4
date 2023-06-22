@@ -65,3 +65,24 @@
 .dataTables_wrapper .dataTable thead .sorting_desc:after {
     display: none;
 }
+
+.myCustomButton {
+
+    color: black !important;
+
+    background-image: none !important;
+    background-color: white !important;
+}
+
+/* This styles the dropdown menu for colvis */
+.dt-button-collection {
+    color: black !important;
+
+    background-image: none !important;
+    background-color: white !important;
+}
+
+/* This styles each dropdown item when it's hovered over */
+.dt-button-collection .dt-button:hover {
+    background-color: #f8f9fa !important;
+}
