@@ -1,20 +1,12 @@
+import { Calendar } from '@fullcalendar/core'
+import dayGridPlugin from '@fullcalendar/daygrid'
 
-document.addEventListener('DOMContentLoaded', function () {
-    var calendarEl = document.getElementById('calendar');
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        events: [
-            {
-                title: 'Birthday Party',
-                start: '2023-07-01'
-            },
-            {
-                title: 'Meeting',
-                start: '2023-07-12T10:30:00',
-                end: '2023-07-12T12:30:00'
-            }
-            // add more events as needed
-        ]
-    });
-    calendar.render();
-});
+const calendar = new Calendar(calendarEl, {
+    plugins: [dayGridPlugin],
+    initialView: 'dayGridWeek',
+    headerToolbar: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'dayGridWeek,dayGridDay' // user can switch between the two
+    }
+})
