@@ -13,6 +13,7 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="new-stylesheet.css">
+    <link rel="stylesheet" href="./styles/layout.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -34,62 +35,15 @@
         <!-- make the small hamburger menu and hide when big (reverse of other) -->
 
         <ul class="nav nav-pills flex-column mb-auto">
-            <!-- Temporary styles - put them somewhere else -->
-            <style>
-                .logo {
-                    border-radius: 0.4rem;
-                    width: 100%;
-                    box-shadow: 0px 5px 10px 0 #00000021;
-                }
-
-                .logo-wrapper {
-                    display: flex;
-                    flex-wrap: nowrap;
-                    flex-direction: row;
-                    align-items: center;
-                }
-
-                .logo-wrapper img {
-                    margin: 5%;
-                    height: 2em;
-                }
-
-                .logo-text {
-                    display: block;
-                    width: 60%;
-                    font-size: 1.3vw;
-                    line-height: 1.2rem;
-                    color: #7a1d1d;
-                    font-family: 'Times New Roman', Times, serif;
-                }
-
-                .logo-subtext {
-                    text-transform: uppercase;
-                    font-size: 0.7vw;
-                    letter-spacing: 0.1vw;
-                    color: #a0a0a0;
-                    font-family: Arial, Helvetica, sans-serif;
-                }
-
-                @media (max-width: 1260px) or (max-height:600px) {
-                    .logo-text {
-                        line-height: 0.8rem;
-                        font-size: 1.5vw;
-                    }
-
-                    .logo-subtext {
-                        display: none;
-                    }
-                }
-            </style>
+            
             <div class="logo mb-3">
                 <li>
                     <a class="logo-wrapper" href="#">
                         <img src="images/phoenix-logo-no-words.png" alt="Phoenix Capital Fund Logo" class="">
                         <span class="logo-text">
-                            Phoenix CF
-
-                        </span>
+                            <!-- Variable brand name according to viewport size -->
+                            <span class="logo-subtext">capital fund</span>
+                          </span>
                     </a>
                 </li>
             </div>
