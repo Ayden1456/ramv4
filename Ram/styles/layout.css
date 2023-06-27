@@ -1,3 +1,10 @@
+.navbar {
+    background-repeat: no-repeat;
+    background-position: bottom -5% right -8vw;
+    background-size: 140%;
+    background-image: url("../images/phoenix-logo-hd.svg");
+}
+
 .logo {
     border-radius: 0.4rem;
     width: 100%;
@@ -10,6 +17,9 @@
     flex-direction: row;
     align-items: center;
 }
+.logo-wrapper:hover {
+    text-decoration: none;
+}
 
 .logo-wrapper img {
     margin: 5%;
@@ -18,11 +28,18 @@
 
 .logo-text {
     display: block;
+    position: relative;
     width: 60%;
     font-size: 1.3vw;
     line-height: 1.2rem;
     color: #7a1d1d;
     font-family: 'Times New Roman', Times, serif;
+    transition: all 0.5s ease;
+}
+
+.logo-text:hover {
+    margin-left: 3px;
+    text-shadow: -5px 0 9px #00000054;
 }
 
 .logo-text::before {
