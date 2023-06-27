@@ -28,15 +28,7 @@
     <!-- Include FullCalendar's JavaScript -->
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js'></script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth'
-            });
-            calendar.render();
-        });
-    </script>
+    <script src="scripts/calendar-loader.js"></script>
 </head>
 
 <body class="bg-body-tertiary row container-fluid" style="margin: auto; padding: 0;">

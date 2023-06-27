@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $('#priority-properties').DataTable({
         dom: 'Bfrtip',
+        responsive: true,
         buttons: [
             {
                 extend: 'colvis',
@@ -9,5 +10,6 @@ $(document).ready(function () {
                 postfixButtons: ['colvisRestore']
             }
         ]
+
     });
 });
