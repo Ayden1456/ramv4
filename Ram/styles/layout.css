@@ -130,8 +130,10 @@
 
 .utils-buttons {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
+    height: 2.3rem;
+    width: 2.3rem;
 
     border: 1px solid #efefef;
     background-color: #fff;
@@ -142,19 +144,18 @@
 
 .utils .message {
     padding: 0 0.5rem;
+    width: fit-content;
 }
 
 .search-box {
-    height: 2.3rem;
-    width: 6vh;
+    justify-content: left;
     margin-left: 0.5rem;
-    
     transition: all 0.5s ease;
     cursor: pointer;
 }
 
 .search-box i {
-    margin: 0 0.8vw;
+    margin: 0 0.6rem;
 }
 
 .search-box input {
