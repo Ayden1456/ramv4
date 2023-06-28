@@ -13,7 +13,7 @@
 
 .logo-wrapper {
     display: flex;
-    height: 10vh;
+    height: 4rem;
     min-height: 3em;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -90,7 +90,7 @@
     justify-content: space-between;
 
     width: 80vw;
-    height: 10vh;
+    height: 4rem;
     min-height: 3em;
     margin: 1rem 0 0.5rem 0;
     padding: 0 1vw;
@@ -145,7 +145,7 @@
 }
 
 .search-box {
-    height: 6vh;
+    height: 2.3rem;
     width: 6vh;
     margin-left: 0.5rem;
     
