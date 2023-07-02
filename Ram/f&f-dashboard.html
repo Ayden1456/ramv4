@@ -28,7 +28,7 @@
         <!-- placeholder -->
     </div>
 
-    <div class="col-md-2 p-3 bg-white vh-100 fixed-top rounded-start rounded-4 d-none d-md-block shadow ">
+    <div class="navbar col-md-2 p-3 bg-white vh-100 fixed-top rounded-start rounded-4 d-none d-md-block shadow ">
 
 
 
@@ -185,54 +185,37 @@
     <!-- top-of-dashboard -->
     <div class="col-md-10 col-sm-12">
         <!-- everything except navigation should be here -->
-        <div class="top-of-dashboard row mt-2">
-            <!-- greeting -->
-            <div class="col-md-3 d-flex align-items-center justify-content-center">
-                <div class="rounded-4 p-4 bg-white shadow ">
-                    <div class="welcome text-start">Welcome, Jozef! 👋</div>
-                </div>
+        <div class="top-bar">
+            <div class="utils">
+              <div class="utils-buttons message"><i class="bi bi-chat-left-dots"></i>&nbsp;Welcome, Jozef! 👋</div>
+              <div class="utils-buttons search-box">
+                <i class="bi bi-search"></i>
+                <input type="search" placeholder="Type in anything...">
+              </div>
+              <div class="utils-buttons more-actions">
+                <i class="bi bi-house-add"></i>
+              </div>
+              <div class="utils-buttons more-actions">
+                <i class="bi bi-three-dots"></i>
+              </div>
             </div>
-            <!-- search-bar -->
-            <div class="col-md-6 p-4">
-                <div class="rounded ">
-                    <div class="search-bar input-group input-group-lg">
-                        <span class="input-group-text shadow" id="search-icon"
-                            style="border-bottom-left-radius: 30px; border-top-left-radius: 30px;">
-                            <i class="bi bi-search ms-1" style="text-align: center;"></i>
-                        </span>
-                        <input type="search" id="form1" class="form-control shadow"
-                            placeholder="Search (for example: Garden Avenue)" aria-label="Search"
-                            aria-describedby="search-icon" style="font-size: small;" />
-                    </div>
-                </div>
+            
+            <div class="name-tag">
+              <img src="./images/jozef-pfp-removebg-preview.png"/>
+              <a href="#" class="d-flex link-body-emphasis text-decoration-none dropdown-toggle align-items-center"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Logged in as Jozef L.
+              </a>
+              <ul class="dropdown-menu text-small shadow dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Team Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+              </ul>
             </div>
-
-            <div class="col-md-3 d-flex align-items-center justify-content-center">
-
-                <div class="bg-white p-3 rounded-4 shadow ">
-                    <a href="#"
-                        class="d-flex link-body-emphasis text-decoration-none dropdown-toggle align-items-center"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/jozef-pfp-removebg-preview.png" alt="" width="32" height="32"
-                            class="rounded-circle me-2 bg-light">
-                        <strong class="me-1">Jozef</strong>
-                    </a>
-                    <ul class="dropdown-menu text-small shadow dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#"></a></li>
-                        <li><a class="dropdown-item" href="#">Team Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
-                </div>
-
-            </div>
-
-        </div>
-
-
+          </div>
 
         <!-- default-menu-items -->
         <div class="default-menu-items row" style="padding: 0;">
