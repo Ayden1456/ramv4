@@ -12,13 +12,12 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./styles/layout.css">
 
   <!-- scripts for graphs  -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./scripts/graph-loader.js" defer> </script>
   <script src="./scripts/animations.js"></script>
-  <link rel="stylesheet" href="./styles/layout.css">
+  <link rel="stylesheet" href="styles/layout.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -153,8 +152,6 @@
           </div>
         </li>
 
-
-
         <li class="nav-item">
           <a class="nav-link" href="#">
             <i class="bi bi-newspaper"></i>
@@ -194,7 +191,6 @@
 
   <!-- top-of-dashboard -->
   <div class="col-md-10 col-sm-12">
-    <!-- everything except navigation should be here -->
     <div class="top-bar">
       <div class="utils">
         <div class="utils-buttons message"><i class="bi bi-chat-left-dots"></i>&nbsp;Welcome, Jozef! 👋</div>
@@ -209,9 +205,9 @@
           <i class="bi bi-three-dots"></i>
         </div>
       </div>
-      
+
       <div class="name-tag">
-        <img src="./images/jozef-pfp-removebg-preview.png"/>
+        <img src="./images/jozef-pfp-removebg-preview.png" />
         <a href="#" class="d-flex link-body-emphasis text-decoration-none dropdown-toggle align-items-center"
           data-bs-toggle="dropdown" aria-expanded="false">
           Logged in as Jozef L.
@@ -228,120 +224,64 @@
     </div>
 
 
-    <div class="default-menu-items row">
+    <!-- starred-stats -->
+    <div class="starred-stats-container col-md-6 p-4">
+      <div class="starred-stats bg-white p-3 shadow rounded" style="height: 100%;">
 
-      <!-- starred-stats -->
-      <div class="starred-stats-container col-md-6 p-4">
-        <div class="starred-stats bg-white rounded-4 p-3 shadow" style="height: 100%;">
+        <div class="top-of-starred-stats row d-flex justify-content-start align-items-center p-3">
 
-          <div class="top-of-starred-stats row d-flex justify-content-start align-items-center p-3">
+          <span class="starred-stats-title col-md-6 font-weight-bold">
+            Starred Stats
+          </span>
 
-            <span class="starred-stats-title col-md-6 fw-bold">
-              Starred Stats
-            </span>
+          <!-- Year/Month radio button group -->
+          <div class="year-to-month btn-group col-xl-6 d-flex justify-content-end align-items-center ">
+            <input type="radio" class="btn-check" name="timeOptions" id="radio1" autocomplete="off" checked>
+            <label class="btn btn-outline-primary btn-custom rounded-0" for="radio1" style="width: 50%;">Year</label>
 
-            <!-- Year/Month radio button group -->
-            <div class="year-to-month btn-group col-xl-6 d-flex justify-content-end align-items-center ">
-              <input type="radio" class="btn-check" name="timeOptions" id="radio1" autocomplete="off" checked>
-              <label class="btn btn-outline-primary btn-custom rounded-left" for="radio1"
-                style="width: 50%;">Year</label>
-
-              <input type="radio" class="btn-check" name="timeOptions" id="radio2" autocomplete="off">
-              <label class="btn btn-outline-primary btn-custom rounded-right" for="radio2"
-                style="width: 50%;">Month</label>
-            </div>
-          </div>
-
-          <div class="stats-holder bg-white border rounded-4 m-3 ">
-            <div class="stats-inside-container p-3">
-
-              <div class="dash-stat row bg-light p-3 m-2 rounded-4">
-                <span class="col-md-10"><i class="golden-star bi bi-star-fill me-3 text-warning"></i>Vacancy</span>
-                <div class="col-md-2 actual-stat d-flex justify-content-end">0</div>
-              </div>
-
-              <div class="dash-stat row bg-light p-3 m-2 rounded-4">
-                <span class="col-md-10"><i class="golden-star bi bi-star-fill me-3 text-warning"></i>Rental Revenue
-                  (Yearly)</span>
-                <div class="col-md-2 actual-stat d-flex justify-content-end">0</div>
-              </div>
-
-              <div class="dash-stat row bg-light p-3 m-2 rounded-4">
-                <span class="col-md-10"><i class="golden-star bi bi-star-fill me-3 text-warning"></i>Lost Revenue
-                  (Yearly)</span>
-                <div class="col-md-2 actual-stat d-flex justify-content-end">0</div>
-              </div>
-
-              <div class="dash-stat row bg-light p-3 m-2 rounded-4">
-                <span class="col-md-10"><i class="bi bi-star me-3"></i>Total Deposit</span>
-                <div class="col-md-2 actual-stat d-flex justify-content-end">0</div>
-              </div>
-
-              <div class="dash-stat row bg-light p-3 m-2 rounded-4">
-                <span class="col-md-10"><i class="bi bi-star me-3"></i>Total Purchase Price</span>
-                <div class="col-md-2 actual-stat d-flex justify-content-end">0</div>
-              </div>
-              <div class="justify-content-center d-flex">
-                <a href="" class="see-all-default btn btn-primary">See All</a>
-              </div>
-            </div>
-
+            <input type="radio" class="btn-check" name="timeOptions" id="radio2" autocomplete="off">
+            <label class="btn btn-outline-primary btn-custom rounded-0" for="radio2" style="width: 50%;">Month</label>
           </div>
         </div>
-      </div>
 
+        <div class="stats-holder bg-white border rounded m-3 ">
+          <div class="stats-inside-container p-3">
 
-      <!-- upcoming-tasks -->
-      <div class="upcoming-tasks-container col-md-6 p-4">
-        <div class="upcoming-tasks bg-white rounded-4 p-3 shadow" style="height: 100%;">
-          <div class="top-of-upcoming-tasks row d-flex justify-content-start align-items-center p-3">
-            <span class="upcoming-tasks-title fw-bold col-lg-6">Upcoming Tasks</span>
-
-            <!-- Urgent/Newest radio button group -->
-            <div class="urgent-to-newest btn-group col-xl-6 justify-content-end align-items-center ">
-              <input type="radio" class="btn-check" name="priorityOptions" id="radio3" autocomplete="off" checked>
-              <label class="btn btn-outline-primary btn-custom rounded-left" for="radio3"
-                style="width: 50%;">Urgent</label>
-
-              <input type="radio" class="btn-check" name="priorityOptions" id="radio4" autocomplete="off">
-              <label class="btn btn-outline-primary btn-custom rounded-right" for="radio4"
-                style="width: 50%;">Newest</label>
-            </div>
-          </div>
-
-
-          <div class="tasks-holder border rounded-4 m-3 p-3">
-
-            <div class="dash-task-1 row p-3 m-2 rounded-4" style="background-color: pink;">
-              <span>Task 1</span>
-
-              <span class="fw-bold text-danger">Due July 1</span>
+            <div class="dash-stat row bg-light p-3 m-2 rounded">
+              <span class="col-md-10"><i class="golden-star bi bi-star-fill me-3 text-warning"></i>Vacancy</span>
+              <div class="col-md-2 actual-stat d-flex justify-content-end">0</div>
             </div>
 
-            <div class="dash-task-1 row p-3 m-2 rounded-4" style="background-color: lightgoldenrodyellow;">
-              <span>Task 2</span>
-              <span class="fw-bold" style="color: orange;">Due July 23</span>
+            <div class="dash-stat row bg-light p-3 m-2 rounded">
+              <span class="col-md-10"><i class="golden-star bi bi-star-fill me-3 text-warning"></i>Rental Revenue
+                (Yearly)</span>
+              <div class="col-md-2 actual-stat d-flex justify-content-end">0</div>
             </div>
 
-            <div class="dash-task-1 row p-3 m-2 rounded-4" style="background-color: lightgreen;">
-              <span>Task 2</span>
-              <span class="fw-bold text-success">Due August 2</span>
+            <div class="dash-stat row bg-light p-3 m-2 rounded">
+              <span class="col-md-10"><i class="golden-star bi bi-star-fill me-3 text-warning"></i>Lost Revenue
+                (Yearly)</span>
+              <div class="col-md-2 actual-stat d-flex justify-content-end">0</div>
             </div>
 
-            <div class="d-flex justify-content-center">
+            <div class="dash-stat row bg-light p-3 m-2 rounded">
+              <span class="col-md-10"><i class="bi bi-star me-3"></i>Total Deposit</span>
+              <div class="col-md-2 actual-stat d-flex justify-content-end">0</div>
+            </div>
+
+            <div class="dash-stat row bg-light p-3 m-2 rounded">
+              <span class="col-md-10"><i class="bi bi-star me-3"></i>Total Purchase Price</span>
+              <div class="col-md-2 actual-stat d-flex justify-content-end">0</div>
+            </div>
+            <div class="justify-content-center d-flex">
               <a href="" class="see-all-default btn btn-primary">See All</a>
             </div>
-
           </div>
 
         </div>
       </div>
-
-
-
-
-      <!-- priority-properties -->
     </div>
+
 
 
     <div class="middle-stats row" style="margin: 0; padding: 0;">
